@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color: cyan" >
+<h1>Information for all employees</h1>
+<br>
+<br>
+<a sec:authorize="hasRole('HR')" style="background-color: #73ff00;box-shadow: #ddabec 0 -10px 6px inset;height: auto" type="button" href="/info_hr">For HR</a>
+<br>
+
+<br>
+<a sec:authorize="hasRole('MANAGER')" style="background-color: #74e22b;box-shadow: #ddabec 0 -10px 6px inset;" type="button" href="/info_manager">For Manager</a>
+
+
+</body>
+</html>
